@@ -6,10 +6,10 @@
   <title>Save Password Pause</title>
 </head>
 <body>
-  <p>
-    Clicking the "login" button below will open a new window. This window will contain a login form that asks for your username and password. You can enter anything there, what's interesting is that after submitting the form, you will be sent to a page that should automatically close the window with `window.close()`. In iOS though the page's execution is paused when a "Save Password" prompt appears. Regardless of how you respond to the prompt, the page will be broken because it wasn't able to execute `window.close()`.
-  </p>
   <button>Login</button>
+  <p>
+    Clicking the "login" button above will open a new window. This window will contain a login form that asks for your username and password. You can enter anything there, what's interesting is that after submitting the form, you will be sent to a page that should automatically close the window with `window.close()`. In iOS though the `window.close()` call is ignored when a "Save Password" prompt appears. The `window.close()` call is also ignored in iOS if a "Choose a stronger password" prompt appears.
+  </p>
   <script>
     const buttonEl = document.querySelector('button');
     buttonEl.addEventListener('click', () => {

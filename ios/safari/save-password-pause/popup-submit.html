@@ -13,6 +13,12 @@
     console.log('Calling window.close()');
     window.close(); // This isn't executing following a "Save Password" prompt in iOS.
     console.log('Called window.close()');
+
+    setInterval(() => {
+      console.log('Calling window.close() from within interval');
+      window.close();
+      console.log('Called window.close() from within interval');
+    }, 1000);
   </script>
 </body>
 </html>
