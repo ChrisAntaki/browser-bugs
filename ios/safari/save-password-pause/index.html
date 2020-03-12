@@ -8,7 +8,7 @@
 <body>
   <button>Login</button>
   <p>
-    Clicking the "login" button above will open a new window. This window will contain a login form that asks for your username and password. You can enter anything there, what's interesting is that after submitting the form, you will be sent to a page that should automatically close the window with `window.close()`. In iOS though the `window.close()` call is ignored when a "Save Password" prompt appears. The `window.close()` call is also ignored in iOS if a "Choose a stronger password" prompt appears.
+    Clicking the "login" button above will open a new window. This window will contain a login form that asks for your username and password. You can enter anything there, what's interesting is that after submitting the form, you will be sent to a page that should automatically close the window with `window.close()`. In iOS though the `window.close()` call is ignored when a "Save Password" or "Update Password" prompt appears.
   </p>
   <script>
     const buttonEl = document.querySelector('button');
