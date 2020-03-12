@@ -7,7 +7,7 @@
 </head>
 <body>
   <p>
-    Clicking the "login" button below will open a new window. This window will contain a login form that asks for your username and password. You can enter anything there, what's interesting is what happens when then click the "login" button. After clicking this button you'll be sent to a page that should automatically close the window with `window.close()`. In iOS though the page's execution is paused while a prompt to remember your password appears. However you respond to the prompt, the page will be broken because it wasn't able to execute `window.close()`.
+    Clicking the "login" button below will open a new window. This window will contain a login form that asks for your username and password. You can enter anything there, what's interesting is that after submitting the form, you will be sent to a page that should automatically close the window with `window.close()`. In iOS though the page's execution is paused when a "Save Password" prompt appears. Regardless of how you respond to the prompt, the page will be broken because it wasn't able to execute `window.close()`.
   </p>
   <button>Login</button>
   <script>
