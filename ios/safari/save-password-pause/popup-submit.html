@@ -7,18 +7,10 @@
 </head>
 <body>
   <p>
-    This page should close automatically. Following a "Save Password" or "Update Password" prompt in iOS it doesn't though.
+    This page should close automatically. The `window.close()` call is ignored when a "Save Password" or "Update Password" prompt is open in iOS though.
   </p>
   <script>
-    console.log('Calling window.close()');
-    window.close(); // This isn't executing following a "Save Password" prompt in iOS.
-    console.log('Called window.close()');
-
-    setInterval(() => {
-      console.log('Calling window.close() from within interval');
-      window.close();
-      console.log('Called window.close() from within interval');
-    }, 1000);
+    window.close(); // This isn't executing when a "Save Password" or "Update Password" prompt is open in iOS.
   </script>
 </body>
 </html>
